@@ -19,6 +19,7 @@ class Store: ObservableObject {
 
 extension Store {
     private func storeInit() {
+        dispatch(.adRequestConfig)
         dispatch(.launchBegin)
         
         dispatch(.logProperty(.local))
@@ -127,6 +128,35 @@ extension Store {
         case .logEvent(let event, let params):
             appCommand = FirebaseEvnetCommand(event, params)
             
+            
+        case .adRequestConfig:
+            appCommand = ADRequestConfigCommand()
+        case .adUpdateConfig(let config):
+            appState.ad.adConfig = config
+        case .adIncreaseShowTimes:
+            appCommand = ADIncreaseTimesCommand(.show)
+        case .adIncreaseClickTimes:
+            appCommand = ADIncreaseTimesCommand(.click)
+        case .adLoad(let position, let completion):
+            appCommand = ADLoadCommand(position, completion)
+        case .adShow(let position, let compeltion):
+            appCommand = ADShowCommand(position, compeltion)
+        case .adDisplay(let position):
+            appCommand = ADDisplayCommand(position)
+        case .adDisapear(let position):
+            appCommand = ADDisapearCommand(position)
+        case .adClean(let position):
+            appCommand = ADCleanCommand(position)
+        case .adCacheTimeout:
+            appCommand = ADCacheTimeoutCommand()
+        case .adDismiss:
+            appCommand = ADDismissCommand()
+        case .adUpdateImpressionDate(let position):
+            appState.ad.ads.filter {
+                $0.position == position
+            }.first?.impressionDate = Date()
+        case .homeAdModel(let model):
+            appState.home.adModel = model
         }
         return (appState, appCommand)
     }

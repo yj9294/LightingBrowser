@@ -58,10 +58,14 @@ struct RootShareCommand: Command {
 
 struct LaunchCommand: Command {
     func execute(in store: Store) {
-        /// 1. 在 2s 内快速走完 80% 进度，1s 内走完剩余进度
-        let duration = store.appState.launch.minTime
+        let duration = store.appState.launch.minTime / 0.6
         store.dispatch(.launchDuration(duration))
+        
+        
+        var isShowAD = false
         let token = SubscriptionToken()
+        let token1 = SubscriptionToken()
+
         Timer.publish(every: 0.01, on: .main, in: .common).autoconnect().sink { _ in
             let progress = store.appState.launch.progress
             let totalCount = 1.0 / 0.01 * store.appState.launch.duration
@@ -70,10 +74,29 @@ struct LaunchCommand: Command {
                 store.dispatch(.launchProgress(value))
             } else {
                 token.unseal()
-                store.dispatch(.launched)
+                store.dispatch(.adShow(.interstitial, { _ in
+                    store.dispatch(.launched)
+                    
+                    store.dispatch(.adLoad(.interstitial))
+                    store.dispatch(.adLoad(.native))
+                }))
             }
             
+            if store.appState.ad.isLoaded(.interstitial), isShowAD {
+                isShowAD = false
+                store.dispatch(.launchDuration(1.0))
+            }
         }.seal(in: token)
+        
+
+        Timer.publish(every: store.appState.launch.minTime, on: .main, in: .common).autoconnect().sink { _ in
+            token1.unseal()
+            isShowAD = true
+            store.dispatch(.launchDuration(store.appState.launch.maxTime))
+        }.seal(in: token1)
+        
+        store.dispatch(.adLoad(.interstitial))
+        store.dispatch(.adLoad(.native))
     }
 }
 
@@ -128,14 +151,49 @@ struct CleanCommand: Command {
                 }
             }
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            store.appState.browser.items = [.navgationItem]
-            store.dispatch(.homeRefreshWebView)
-            store.dispatch(.rootShowClean(false))
-            store.dispatch(.rootAlert("Clean Successfully."))
+
+        var progress = 0.0
+        var duration = 15.6
+        var isShowAD = false
+        let token = SubscriptionToken()
+        let token1 = SubscriptionToken()
+
+        Timer.publish(every: 0.01, on: .main, in: .common).autoconnect().sink { _ in
+            let totalCount = 1.0 / 0.01 * duration
+            progress = progress + 1 / totalCount
+            if store.appState.root.isEnterbackground {
+                token.unseal()
+                store.dispatch(.rootShowClean(false))
+                return
+            }
+            if progress >= 1.0 {
+                token.unseal()
+                store.dispatch(.adShow(.interstitial, { _ in
+                    store.appState.browser.items = [.navgationItem]
+                    store.dispatch(.homeRefreshWebView)
+                    store.dispatch(.rootShowClean(false))
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                        store.dispatch(.rootAlert("Clean Successfully."))
+                    }
+                    
+                    // 离开当前页面清空首页广告
+                    store.dispatch(.adLoad(.native))
+                    
+                    store.dispatch(.logEvent(.cleanAnimation))
+                    store.dispatch(.logEvent(.cleanAlert))
+                }))
+            }
             
-            store.dispatch(.logEvent(.cleanAnimation))
-            store.dispatch(.logEvent(.cleanAlert))
-        }
+            if store.appState.ad.isLoaded(.interstitial), isShowAD {
+                isShowAD = false
+                duration = 0.1
+            }
+        }.seal(in: token)
+        
+
+        Timer.publish(every: 2.5, on: .main, in: .common).autoconnect().sink { _ in
+            token1.unseal()
+            isShowAD = true
+        }.seal(in: token1)
     }
 }

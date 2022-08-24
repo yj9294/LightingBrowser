@@ -16,7 +16,7 @@ struct AppState {
     var browser = Browser()
     var setting = Setting()
     var firebase = Firebase()
-
+    var ad = AD()
 }
 
 extension AppState {
@@ -85,6 +85,9 @@ extension AppState {
         
         /// 中间 item
         let items: [Item] = Item.allCases
+        
+        // ad
+        var adModel: NativeViewModel = .None
         
         enum Item: String, CaseIterable {
             case facebook, google, youtube, twitter, instagram, amazon, gmail, yahoo
@@ -237,5 +240,41 @@ extension AppState {
             case searchSuccess = "ll"
         }
 
+    }
+}
+
+extension AppState {
+    struct AD {
+        
+        /// 遠程或者本地配置
+        @UserDefault(key: "state.ad.config")
+        var adConfig: ADConfig?
+       
+        /// 本地紀錄點擊次數和展示次數
+        @UserDefault(key: "state.ad.limit")
+        var limit: ADLimit?
+        
+        /// 广告位加载模型
+        let ads:[ADLoadModel] = ADPosition.allCases.map { p in
+            ADLoadModel(position: p)
+        }.filter { m in
+            m.position != .all
+        }
+        
+        func isLoaded(_ position: ADPosition) -> Bool {
+            return self.ads.filter {
+                $0.position == position
+            }.first?.isLoaded == true
+        }
+        
+        /// 是否超出限制
+        func isLimited(in store: Store) -> Bool {
+            if limit?.date.isToday == true {
+                if (store.appState.ad.limit?.showTimes ?? 0) >= (store.appState.ad.adConfig?.showTimes ?? 0) || (store.appState.ad.limit?.clickTimes ?? 0) >= (store.appState.ad.adConfig?.clickTimes ?? 0) {
+                    return true
+                }
+            }
+            return false
+        }
     }
 }

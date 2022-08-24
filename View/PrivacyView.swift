@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PrivacyView: View {
     @Environment(\.presentationMode) var presentation
+    @EnvironmentObject var store: Store
     var body: some View {
         ScrollView {
             Text("""
@@ -91,6 +92,9 @@ If you have any questions about this Privacy Policy, please do not hesitate to c
 extension PrivacyView {
     func backAction() {
         self.presentation.wrappedValue.dismiss()
+        
+        store.dispatch(.adLoad(.native))
+        store.dispatch(.adLoad(.interstitial))
     }
 }
 

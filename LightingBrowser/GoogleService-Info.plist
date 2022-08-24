@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>895900676673-01cbmch043qur5arrdfe42bnabot8ia5.apps.googleusercontent.com</string>
+	<string>1088795628198-o30gttkvb3ioqj3jpa8nssrfbbadq3eh.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.895900676673-01cbmch043qur5arrdfe42bnabot8ia5</string>
+	<string>com.googleusercontent.apps.1088795628198-o30gttkvb3ioqj3jpa8nssrfbbadq3eh</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBEQq64Bbq5cZ0kp-9t2IMXcP1l12dWOH8</string>
+	<string>AIzaSyCL352YPJ8yAhv-WelgAI8CMC0xbuJyJqU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>895900676673</string>
+	<string>1088795628198</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.browser.lighting.show.school</string>
+	<string>com.testbird.spark.2</string>
 	<key>PROJECT_ID</key>
-	<string>lighting-browser-ios</string>
+	<string>testbird-f2fe7</string>
 	<key>STORAGE_BUCKET</key>
-	<string>lighting-browser-ios.appspot.com</string>
+	<string>testbird-f2fe7.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:895900676673:ios:dc259ab7bf046cadc0ccc0</string>
+	<string>1:1088795628198:ios:52ec35ee7ed596e92dda67</string>
 </dict>
 </plist>

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TermsView: View {
     @Environment(\.presentationMode) var presentation
+    @EnvironmentObject var store: Store
     var body: some View {
         ScrollView {
             Text("""
@@ -81,6 +82,9 @@ Fraud, Phishing and Other Deceptive Practices
 extension TermsView {
     func backAction() {
         self.presentation.wrappedValue.dismiss()
+        
+        store.dispatch(.adLoad(.native))
+        store.dispatch(.adLoad(.interstitial))
     }
 }
 

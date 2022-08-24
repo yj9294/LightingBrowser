@@ -71,4 +71,21 @@ enum AppAction {
     // MARK: firebase
     case logEvent(AppState.Firebase.FirebaseEvent,[String:String]? = nil)
     case logProperty(AppState.Firebase.FirebaseProperty, String? = nil)
+    
+    
+    // MARK: ad
+    case adRequestConfig
+    case adUpdateConfig(ADConfig?)
+    case adIncreaseClickTimes
+    case adIncreaseShowTimes
+    
+    case adLoad(ADPosition, ((NativeViewModel)->Void)? = nil)
+    case adShow(ADPosition, ((NativeViewModel)->Void)? = nil)
+    case adDisplay(ADPosition)
+    case adDisapear(ADPosition)
+    case adClean(ADPosition)
+    case adUpdateImpressionDate(ADPosition)
+    case adCacheTimeout
+    case adDismiss
+    case homeAdModel(NativeViewModel)
 }

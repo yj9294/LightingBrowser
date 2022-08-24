@@ -11,4 +11,6 @@ target 'LightingBrowser' do
   pod 'Firebase/Performance'
 
   pod 'FBSDKCoreKit'
+  pod 'Google-Mobile-Ads-SDK'
+  pod 'SnapKit'
 end

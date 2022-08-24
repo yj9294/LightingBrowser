@@ -66,6 +66,11 @@ extension CleanAlertView {
         store.dispatch(.rootShowCleanAlert(false))
         store.dispatch(.rootShowClean(true))
         store.dispatch(.homeClean)
+        
+        // 离开当前页面清空首页广告
+        store.dispatch(.adDisapear(.native))
+        
+        store.dispatch(.adLoad(.interstitial))
     }
 }
 

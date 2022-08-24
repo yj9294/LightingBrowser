@@ -16,6 +16,13 @@ struct HomeView: View {
             Spacer()
             centerView
             Spacer()
+            HStack{
+                NativeView(model: store.appState.home.adModel)
+            }
+            .frame(height: 112)
+            .padding(.horizontal, 20)
+            .padding(.top, 20)
+            Spacer()
             bottomView
             NavigationLink(isActive: $store.appState.setting.pushTerms) {
                 TermsView()
@@ -43,6 +50,9 @@ struct HomeView: View {
             if store.appState.home.isNavigation {
                 store.dispatch(.logEvent(.navigationShow))
             }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification)) { _ in
+            store.dispatch(.adDisapear(.native))
         }
     }
     
@@ -211,8 +221,12 @@ extension HomeView {
     }
     
     func goTab() {
+        // 离开当前页面清空首页广告
+        store.dispatch(.adDisapear(.native))
+        
         UIApplication.shared.hiddenKeyboard()
         store.dispatch(.rootShowTabView(true))
+        store.dispatch(.adLoad(.native))
         
         store.dispatch(.logEvent(.tabShow))
     }

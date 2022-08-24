@@ -94,8 +94,12 @@ struct SettingRow: View {
                 }
             case .terms:
                 store.dispatch(.settingPushTerms)
+                // 离开当前页面清空首页广告
+                store.dispatch(.adDisapear(.native))
             case .privacy:
                 store.dispatch(.settingPushPrivacy)
+                // 离开当前页面清空首页广告
+                store.dispatch(.adDisapear(.native))
             }
         } label: {
             Row(item: item)

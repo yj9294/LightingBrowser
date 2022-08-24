@@ -13,6 +13,12 @@ struct TabBarView: View {
     var body: some View {
         VStack{
             topView
+            HStack{
+                NativeView(model: store.appState.home.adModel)
+            }
+            .frame(height: 112)
+            .padding(.horizontal, 20)
+            .padding(.top, 20)
             bottomView
         }
         .background(Image("launch_bg").resizable().ignoresSafeArea())
@@ -112,6 +118,10 @@ extension TabBarView {
         
         store.dispatch(.rootShowTabView(false))
         store.dispatch(.homeRefreshWebView)
+        
+        store.dispatch(.adDisapear(.native))
+        store.dispatch(.adLoad(.native))
+        store.dispatch(.adLoad(.interstitial))
     }
     
     func deleteItem(_ item: BrowserItem) {
@@ -133,12 +143,20 @@ extension TabBarView {
         store.appState.browser.items.insert(.navgationItem, at: 0)
         store.dispatch(.homeRefreshWebView)
         store.dispatch(.rootShowTabView(false))
-        
+    
+        store.dispatch(.adDisapear(.native))
+        store.dispatch(.adLoad(.native))
+        store.dispatch(.adLoad(.interstitial))
+
         store.dispatch(.logEvent(.tabNew, ["lib": "tab"]))
     }
     
     func backAction() {
         store.dispatch(.rootShowTabView(false))
+        
+        store.dispatch(.adDisapear(.native))
+        store.dispatch(.adLoad(.native))
+        store.dispatch(.adLoad(.interstitial))
     }
 }
 
