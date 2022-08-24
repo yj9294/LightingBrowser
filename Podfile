@@ -6,5 +6,9 @@ target 'LightingBrowser' do
   use_frameworks!
 
   # Pods for LightingBrowser
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
+  pod 'Firebase/Performance'
 
+  pod 'FBSDKCoreKit'
 end

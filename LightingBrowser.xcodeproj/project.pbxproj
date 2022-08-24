@@ -12,6 +12,27 @@
 		21714BC128B5BCF600C5C041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21714BC028B5BCF600C5C041 /* Assets.xcassets */; };
 		21714BC428B5BCF600C5C041 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21714BC328B5BCF600C5C041 /* Preview Assets.xcassets */; };
 		2C27BA7D141BCA7A49A95DCF /* Pods_LightingBrowser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3672D09F928D339E0EE290 /* Pods_LightingBrowser.framework */; };
+		C7C5D77D28B5C5BF0055D465 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C5D77C28B5C5BF0055D465 /* Launch Screen.storyboard */; };
+		C7C5D79528B5C6900055D465 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D78028B5C6900055D465 /* Helper.swift */; };
+		C7C5D79628B5C6900055D465 /* BrowseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D78228B5C6900055D465 /* BrowseItem.swift */; };
+		C7C5D79728B5C6900055D465 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D78328B5C6900055D465 /* State.swift */; };
+		C7C5D79828B5C6900055D465 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D78428B5C6900055D465 /* Command.swift */; };
+		C7C5D79928B5C6900055D465 /* FirebaseCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D78528B5C6900055D465 /* FirebaseCommand.swift */; };
+		C7C5D79A28B5C6900055D465 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D78628B5C6900055D465 /* Store.swift */; };
+		C7C5D79B28B5C6900055D465 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D78728B5C6900055D465 /* Action.swift */; };
+		C7C5D79C28B5C6900055D465 /* ViewCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D78828B5C6900055D465 /* ViewCommand.swift */; };
+		C7C5D79D28B5C6900055D465 /* PrivacyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D78A28B5C6900055D465 /* PrivacyView.swift */; };
+		C7C5D79E28B5C6900055D465 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D78B28B5C6900055D465 /* HomeView.swift */; };
+		C7C5D79F28B5C6900055D465 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D78C28B5C6900055D465 /* ShareView.swift */; };
+		C7C5D7A028B5C6900055D465 /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D78D28B5C6900055D465 /* TermsView.swift */; };
+		C7C5D7A128B5C6900055D465 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D78E28B5C6900055D465 /* RootView.swift */; };
+		C7C5D7A228B5C6900055D465 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D78F28B5C6900055D465 /* TabView.swift */; };
+		C7C5D7A328B5C6900055D465 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D79028B5C6900055D465 /* WebView.swift */; };
+		C7C5D7A428B5C6900055D465 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D79128B5C6900055D465 /* LaunchView.swift */; };
+		C7C5D7A528B5C6900055D465 /* CleanAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D79228B5C6900055D465 /* CleanAlertView.swift */; };
+		C7C5D7A628B5C6900055D465 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D79328B5C6900055D465 /* SettingView.swift */; };
+		C7C5D7A728B5C6900055D465 /* CleanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5D79428B5C6900055D465 /* CleanView.swift */; };
+		C7C5D7AA28B5C97F0055D465 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7C5D7A928B5C97F0055D465 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +43,28 @@
 		21714BC328B5BCF600C5C041 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		95FFB69C420274948892904A /* Pods-LightingBrowser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightingBrowser.debug.xcconfig"; path = "Target Support Files/Pods-LightingBrowser/Pods-LightingBrowser.debug.xcconfig"; sourceTree = "<group>"; };
 		BD3672D09F928D339E0EE290 /* Pods_LightingBrowser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightingBrowser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7C5D77C28B5C5BF0055D465 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		C7C5D77E28B5C5FB0055D465 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C7C5D78028B5C6900055D465 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		C7C5D78228B5C6900055D465 /* BrowseItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseItem.swift; sourceTree = "<group>"; };
+		C7C5D78328B5C6900055D465 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		C7C5D78428B5C6900055D465 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		C7C5D78528B5C6900055D465 /* FirebaseCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseCommand.swift; sourceTree = "<group>"; };
+		C7C5D78628B5C6900055D465 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		C7C5D78728B5C6900055D465 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		C7C5D78828B5C6900055D465 /* ViewCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCommand.swift; sourceTree = "<group>"; };
+		C7C5D78A28B5C6900055D465 /* PrivacyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyView.swift; sourceTree = "<group>"; };
+		C7C5D78B28B5C6900055D465 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C7C5D78C28B5C6900055D465 /* ShareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
+		C7C5D78D28B5C6900055D465 /* TermsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
+		C7C5D78E28B5C6900055D465 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		C7C5D78F28B5C6900055D465 /* TabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		C7C5D79028B5C6900055D465 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		C7C5D79128B5C6900055D465 /* LaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		C7C5D79228B5C6900055D465 /* CleanAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CleanAlertView.swift; sourceTree = "<group>"; };
+		C7C5D79328B5C6900055D465 /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		C7C5D79428B5C6900055D465 /* CleanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CleanView.swift; sourceTree = "<group>"; };
+		C7C5D7A928B5C97F0055D465 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D67D61B76627BEF442D4B952 /* Pods-LightingBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightingBrowser.release.xcconfig"; path = "Target Support Files/Pods-LightingBrowser/Pods-LightingBrowser.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,8 +101,14 @@
 		21714BBB28B5BCE700C5C041 /* LightingBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				C7C5D78128B5C6900055D465 /* DataFlow */,
+				C7C5D77F28B5C6900055D465 /* Util */,
+				C7C5D78928B5C6900055D465 /* View */,
+				C7C5D77E28B5C5FB0055D465 /* Info.plist */,
+				C7C5D77C28B5C5BF0055D465 /* Launch Screen.storyboard */,
 				21714BBC28B5BCEA00C5C041 /* LightingBrowserApp.swift */,
 				21714BBE28B5BCEA00C5C041 /* ContentView.swift */,
+				C7C5D7A928B5C97F0055D465 /* GoogleService-Info.plist */,
 				21714BC028B5BCF600C5C041 /* Assets.xcassets */,
 				21714BC228B5BCF600C5C041 /* Preview Content */,
 			);
@@ -80,7 +129,6 @@
 				95FFB69C420274948892904A /* Pods-LightingBrowser.debug.xcconfig */,
 				D67D61B76627BEF442D4B952 /* Pods-LightingBrowser.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -91,6 +139,46 @@
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
+		};
+		C7C5D77F28B5C6900055D465 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5D78028B5C6900055D465 /* Helper.swift */,
+			);
+			path = Util;
+			sourceTree = SOURCE_ROOT;
+		};
+		C7C5D78128B5C6900055D465 /* DataFlow */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5D78228B5C6900055D465 /* BrowseItem.swift */,
+				C7C5D78328B5C6900055D465 /* State.swift */,
+				C7C5D78428B5C6900055D465 /* Command.swift */,
+				C7C5D78528B5C6900055D465 /* FirebaseCommand.swift */,
+				C7C5D78628B5C6900055D465 /* Store.swift */,
+				C7C5D78728B5C6900055D465 /* Action.swift */,
+				C7C5D78828B5C6900055D465 /* ViewCommand.swift */,
+			);
+			path = DataFlow;
+			sourceTree = SOURCE_ROOT;
+		};
+		C7C5D78928B5C6900055D465 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7C5D79228B5C6900055D465 /* CleanAlertView.swift */,
+				C7C5D79428B5C6900055D465 /* CleanView.swift */,
+				C7C5D78B28B5C6900055D465 /* HomeView.swift */,
+				C7C5D79128B5C6900055D465 /* LaunchView.swift */,
+				C7C5D78A28B5C6900055D465 /* PrivacyView.swift */,
+				C7C5D78E28B5C6900055D465 /* RootView.swift */,
+				C7C5D79328B5C6900055D465 /* SettingView.swift */,
+				C7C5D78C28B5C6900055D465 /* ShareView.swift */,
+				C7C5D78F28B5C6900055D465 /* TabView.swift */,
+				C7C5D78D28B5C6900055D465 /* TermsView.swift */,
+				C7C5D79028B5C6900055D465 /* WebView.swift */,
+			);
+			path = View;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -103,6 +191,8 @@
 				21714BB528B5BCE700C5C041 /* Sources */,
 				21714BB628B5BCE700C5C041 /* Frameworks */,
 				21714BB728B5BCE700C5C041 /* Resources */,
+				74B44D7AC52EBFE3A3DFD558 /* [CP] Embed Pods Frameworks */,
+				C7C5D7A828B5C8F70055D465 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -151,6 +241,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7C5D77D28B5C5BF0055D465 /* Launch Screen.storyboard in Resources */,
+				C7C5D7AA28B5C97F0055D465 /* GoogleService-Info.plist in Resources */,
 				21714BC428B5BCF600C5C041 /* Preview Assets.xcassets in Resources */,
 				21714BC128B5BCF600C5C041 /* Assets.xcassets in Resources */,
 			);
@@ -159,6 +251,42 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		74B44D7AC52EBFE3A3DFD558 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LightingBrowser/Pods-LightingBrowser-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LightingBrowser/Pods-LightingBrowser-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LightingBrowser/Pods-LightingBrowser-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7C5D7A828B5C8F70055D465 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 		D5477061AE828053D41D32B2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,8 +316,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7C5D79628B5C6900055D465 /* BrowseItem.swift in Sources */,
+				C7C5D7A628B5C6900055D465 /* SettingView.swift in Sources */,
+				C7C5D79B28B5C6900055D465 /* Action.swift in Sources */,
+				C7C5D79C28B5C6900055D465 /* ViewCommand.swift in Sources */,
 				21714BBF28B5BCEA00C5C041 /* ContentView.swift in Sources */,
+				C7C5D79D28B5C6900055D465 /* PrivacyView.swift in Sources */,
 				21714BBD28B5BCEA00C5C041 /* LightingBrowserApp.swift in Sources */,
+				C7C5D7A028B5C6900055D465 /* TermsView.swift in Sources */,
+				C7C5D7A528B5C6900055D465 /* CleanAlertView.swift in Sources */,
+				C7C5D7A428B5C6900055D465 /* LaunchView.swift in Sources */,
+				C7C5D79A28B5C6900055D465 /* Store.swift in Sources */,
+				C7C5D79728B5C6900055D465 /* State.swift in Sources */,
+				C7C5D79528B5C6900055D465 /* Helper.swift in Sources */,
+				C7C5D7A228B5C6900055D465 /* TabView.swift in Sources */,
+				C7C5D7A328B5C6900055D465 /* WebView.swift in Sources */,
+				C7C5D79F28B5C6900055D465 /* ShareView.swift in Sources */,
+				C7C5D79E28B5C6900055D465 /* HomeView.swift in Sources */,
+				C7C5D7A728B5C6900055D465 /* CleanView.swift in Sources */,
+				C7C5D79928B5C6900055D465 /* FirebaseCommand.swift in Sources */,
+				C7C5D79828B5C6900055D465 /* Command.swift in Sources */,
+				C7C5D7A128B5C6900055D465 /* RootView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +393,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -300,7 +447,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -321,21 +468,26 @@
 				DEVELOPMENT_ASSET_PATHS = "\"LightingBrowser/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LightingBrowser/Info.plist;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Please allow access to your activity tracking to provide personalized push services and reduce interference caused by irrelevant services.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = xx.LightingBrowser;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.browser.lighting.show.school;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -350,21 +502,26 @@
 				DEVELOPMENT_ASSET_PATHS = "\"LightingBrowser/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LightingBrowser/Info.plist;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Please allow access to your activity tracking to provide personalized push services and reduce interference caused by irrelevant services.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = xx.LightingBrowser;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.browser.lighting.show.school;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
