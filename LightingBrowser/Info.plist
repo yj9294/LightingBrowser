@@ -7,20 +7,22 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string></string>
+				<string>fb1096891247664776</string>
 			</array>
 		</dict>
 	</array>
 	<key>FacebookAdvertiserIDCollectionEnabled</key>
 	<true/>
 	<key>FacebookAppID</key>
-	<string></string>
+	<string>1096891247664776</string>
 	<key>FacebookAutoLogAppEventsEnabled</key>
 	<true/>
 	<key>FacebookClientToken</key>
-	<string></string>
+	<string>c60f0f3cdafd7efa1f6b98600bbc39d4</string>
 	<key>FacebookDisplayName</key>
 	<string>LightingBrowser</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-5357558080115421~9953625761</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>
@@ -31,7 +33,5 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-3940256099942544~1458002511</string>
 </dict>
 </plist>

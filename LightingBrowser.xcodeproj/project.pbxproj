@@ -35,8 +35,8 @@
 		C7E0FFBF28B5F37800231E5F /* ADCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E0FFBE28B5F37800231E5F /* ADCommand.swift */; };
 		C7E0FFC128B5F44C00231E5F /* ADItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E0FFC028B5F44C00231E5F /* ADItem.swift */; };
 		C7E0FFC528B5F86000231E5F /* NativeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E0FFC428B5F86000231E5F /* NativeView.swift */; };
-		C7E0FFC728B5FA1700231E5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7E0FFC628B5FA1700231E5F /* GoogleService-Info.plist */; };
 		C7E0FFC928B5FA3100231E5F /* admob.json in Resources */ = {isa = PBXBuildFile; fileRef = C7E0FFC828B5FA3100231E5F /* admob.json */; };
+		C7E0FFCD28B8FEEE00231E5F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C7E0FFCC28B8FEEE00231E5F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,8 +71,8 @@
 		C7E0FFBE28B5F37800231E5F /* ADCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADCommand.swift; sourceTree = "<group>"; };
 		C7E0FFC028B5F44C00231E5F /* ADItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADItem.swift; sourceTree = "<group>"; };
 		C7E0FFC428B5F86000231E5F /* NativeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeView.swift; sourceTree = "<group>"; };
-		C7E0FFC628B5FA1700231E5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C7E0FFC828B5FA3100231E5F /* admob.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = admob.json; sourceTree = "<group>"; };
+		C7E0FFCC28B8FEEE00231E5F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D67D61B76627BEF442D4B952 /* Pods-LightingBrowser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightingBrowser.release.xcconfig"; path = "Target Support Files/Pods-LightingBrowser/Pods-LightingBrowser.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,8 +109,8 @@
 		21714BBB28B5BCE700C5C041 /* LightingBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				C7E0FFCC28B8FEEE00231E5F /* GoogleService-Info.plist */,
 				C7E0FFC828B5FA3100231E5F /* admob.json */,
-				C7E0FFC628B5FA1700231E5F /* GoogleService-Info.plist */,
 				C7C5D78128B5C6900055D465 /* DataFlow */,
 				C7C5D77F28B5C6900055D465 /* Util */,
 				C7C5D78928B5C6900055D465 /* View */,
@@ -255,7 +255,7 @@
 			files = (
 				C7E0FFC928B5FA3100231E5F /* admob.json in Resources */,
 				C7C5D77D28B5C5BF0055D465 /* Launch Screen.storyboard in Resources */,
-				C7E0FFC728B5FA1700231E5F /* GoogleService-Info.plist in Resources */,
+				C7E0FFCD28B8FEEE00231E5F /* GoogleService-Info.plist in Resources */,
 				21714BC428B5BCF600C5C041 /* Preview Assets.xcassets in Resources */,
 				21714BC128B5BCF600C5C041 /* Assets.xcassets in Resources */,
 			);
@@ -482,7 +482,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LightingBrowser/Preview Content\"";
-				DEVELOPMENT_TEAM = 7HTJ8C6E28;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LightingBrowser/Info.plist;
@@ -499,8 +499,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.browser.lighting.show.school.test;
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.browser.lighting.show.school;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -517,7 +517,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LightingBrowser/Preview Content\"";
-				DEVELOPMENT_TEAM = 7HTJ8C6E28;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LightingBrowser/Info.plist;
@@ -534,8 +534,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.browser.lighting.show.school.test;
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.browser.lighting.show.school;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

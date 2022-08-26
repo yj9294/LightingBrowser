@@ -227,7 +227,8 @@ extension HomeView {
         UIApplication.shared.hiddenKeyboard()
         store.dispatch(.rootShowTabView(true))
         store.dispatch(.adLoad(.native))
-        
+        store.dispatch(.adLoad(.interstitial))
+
         store.dispatch(.logEvent(.tabShow))
     }
     

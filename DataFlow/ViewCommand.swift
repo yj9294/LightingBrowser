@@ -95,7 +95,10 @@ struct LaunchCommand: Command {
             store.dispatch(.launchDuration(store.appState.launch.maxTime))
         }.seal(in: token1)
         
-        store.dispatch(.adLoad(.interstitial))
+        store.dispatch(.adLoad(.interstitial, { _ in
+            token1.unseal()
+            store.dispatch(.launchDuration(1.0))
+        }))
         store.dispatch(.adLoad(.native))
     }
 }

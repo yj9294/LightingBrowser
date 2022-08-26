@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 func LLog(_ log: @autoclosure () -> String) {
-    if false {
+    if true {
         NSLog("\(log())")
     } else {
         debugPrint(log())

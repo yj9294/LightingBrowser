@@ -21,9 +21,9 @@ struct ADRequestConfigCommand: Command {
                 let data = try Data(contentsOf: url)
                 let config = try JSONDecoder().decode(ADConfig.self, from: data)
                 store.dispatch(.adUpdateConfig(config))
-                debugPrint("[Config] Read local ad config success.")
+                LLog("[Config] Read local ad config success.")
             } catch let error {
-                debugPrint("[Config] Read local ad config fail.\(error.localizedDescription)")
+                LLog("[Config] Read local ad config fail.\(error.localizedDescription)")
             }
         }
         
@@ -33,10 +33,10 @@ struct ADRequestConfigCommand: Command {
         remoteConfig.configSettings = settings
         remoteConfig.fetch { [weak remoteConfig] (status, error) -> Void in
             if status == .success {
-                debugPrint("[Config] Config fetcher! ✅")
+                LLog("[Config] Config fetcher! ✅")
                 remoteConfig?.activate(completion: { _, _ in
                     let keys = remoteConfig?.allKeys(from: .remote)
-                    debugPrint("[Config] config params = \(keys ?? [])")
+                    LLog("[Config] config params = \(keys ?? [])")
                     if let remoteAd = remoteConfig?.configValue(forKey: "adConfig").stringValue {
                         // base64 的remote 需要解码
                         let data = Data(base64Encoded: remoteAd) ?? Data()
@@ -46,12 +46,12 @@ struct ADRequestConfigCommand: Command {
                                 store.dispatch(.adUpdateConfig(remoteADConfig))
                             }
                         } else {
-                            debugPrint("[Config] Config config 'ad_config' is nil or config not json.")
+                            LLog("[Config] Config config 'ad_config' is nil or config not json.")
                         }
                     }
                 })
             } else {
-                debugPrint("[Config] config not fetcher, error = \(error?.localizedDescription ?? "")")
+                LLog("[Config] config not fetcher, error = \(error?.localizedDescription ?? "")")
             }
         }
         
@@ -72,7 +72,7 @@ struct ADIncreaseTimesCommand: Command {
     
     func execute(in store: Store) {
         if store.appState.ad.isLimited(in: store) {
-            debugPrint("[AD] 用戶超限制。")
+            LLog("[AD] 用戶超限制。")
             store.dispatch(.adClean(.all))
             store.dispatch(.adDisapear(.all))
             return
@@ -81,11 +81,11 @@ struct ADIncreaseTimesCommand: Command {
         if status == .show {
             let showTime = store.appState.ad.limit?.showTimes ?? 0
             store.appState.ad.limit?.showTimes = showTime + 1
-            debugPrint("[AD] [LIMIT] showTime: \(showTime+1) total: \(store.appState.ad.adConfig?.showTimes ?? 0)")
+            LLog("[AD] [LIMIT] showTime: \(showTime+1) total: \(store.appState.ad.adConfig?.showTimes ?? 0)")
         } else  if status == .click {
             let clickTime = store.appState.ad.limit?.clickTimes ?? 0
             store.appState.ad.limit?.clickTimes = clickTime + 1
-            debugPrint("[AD] [LIMIT] clickTime: \(clickTime+1) total: \(store.appState.ad.adConfig?.clickTimes ?? 0)")
+            LLog("[AD] [LIMIT] clickTime: \(clickTime+1) total: \(store.appState.ad.adConfig?.clickTimes ?? 0)")
         }
     }
 }
@@ -124,7 +124,9 @@ struct ADLoadCommand: Command {
         if let ad = ads.first {
             // 插屏直接一步加载
             if position.isInterstitialAd {
-                ad.beginAddWaterFall(in: store)
+                ad.beginAddWaterFall(callback: { isSuccess in
+                    self.completion?(.None)
+                }, in: store)
             } else if position.isNativeAD{
                 // 原生广告需要同步显示
                 ad.beginAddWaterFall(callback: { isSuccess in

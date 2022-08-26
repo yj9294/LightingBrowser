@@ -1,22 +1,13 @@
 {
-    "installOnlyTouch": false,
-    "showTimes":300,
-    "clickTimes":50,
+    "showTimes":30,
+    "clickTimes":5,
     "ads": [
         {
             "key": "interstitial",
             "value": [
                 {
                     "theAdPriority":1,
-                    "theAdID":"ca-app-pub-3940256099942544/4411468910"
-                },
-                {
-                    "theAdPriority":3,
-                    "theAdID":"ca-app-pub-3940256099942544/4411468910X3"
-                },
-                {
-                    "theAdPriority":2,
-                    "theAdID":"ca-app-pub-3940256099942544/5135589807"
+                    "theAdID":"ca-app-pub-5357558080115421/2029273406"
                 }
             ]
         },
@@ -25,15 +16,7 @@
             "value": [
                 {
                     "theAdPriority":1,
-                    "theAdID":"ca-app-pub-3940256099942544/2521693316"
-                },
-                {
-                    "theAdPriority":2,
-                    "theAdID":"ca-app-pub-3940256099942544/3986624511"
-                },
-                {
-                    "theAdPriority":3,
-                    "theAdID":"ca-app-pub-3940256099942544/3986624511X3"
+                    "theAdID":"ca-app-pub-5357558080115421/8201560392"
                 }
             ]
         }

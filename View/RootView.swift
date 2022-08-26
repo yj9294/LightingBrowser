@@ -39,6 +39,8 @@ struct RootView: View {
         }
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
             AppEnterbackground = false
+            store.dispatch(.rootShowClean(false))
+            store.dispatch(.adDisapear(.interstitial))
             store.dispatch(.adDismiss)
             if store.appState.root.isEnterbackground {
                 store.dispatch(.logEvent(.openHot))
@@ -51,7 +53,6 @@ struct RootView: View {
         .onReceive(NotificationCenter.default.publisher(for: UIApplication.didEnterBackgroundNotification)) { _ in
             AppEnterbackground = true
             store.dispatch(.adDismiss)
-            store.dispatch(.adDisplay(.interstitial))
             store.dispatch(.rootBackgrund(true))
             store.dispatch(.rootDismiss)
         }
